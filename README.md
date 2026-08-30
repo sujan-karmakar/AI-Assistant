@@ -42,7 +42,7 @@ python main.py
 Or
 
 ```bash
-flask --app main --debug
+flask --app main --debug run
 ```
 
 Then open:
