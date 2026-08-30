@@ -21,7 +21,9 @@
             </form>
 
             <p id="ask-loading" style="display: none">Loading...</p>
-            <p id="ask-answer"></p>
+            {% if answer %}
+                <p id="ask-answer">{{ answer }}</p>
+            {% endif %}
         </div>
 
         <div class="form-section">
@@ -33,7 +35,9 @@
             </form>
 
             <p id="summary-loading" style="display: none">Loading...</p>
-            <p id="summary-answer"></p>
+            {% if summary %}
+                <p id="summary-answer">{{ summary }}</p>
+            {% endif %}
         </div>
     </div>
 </body>
