@@ -1,0 +1,137 @@
+:root {
+    color-scheme: dark;
+    --bg: #070b10;
+    --bg-soft: #0d131a;
+    --panel: #0a1117;
+    --panel-alt: #101a23;
+    --line: rgba(255, 255, 255, 0.8);
+    --text: #f5f7fa;
+    --muted: #ccd3db;
+    --button-bg: #0f171f;
+    --button-hover: rgba(255, 255, 255, 0.04);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.page-shell {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.page-title {
+    margin: 0 0 24px;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text);
+}
+
+.container {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 28px 24px;
+}
+
+.form-section + .form-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+h4 {
+    margin: 0 0 16px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+form {
+    display: block;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.field {
+    width: 100%;
+    display: block;
+    background: var(--bg-soft);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 12px 14px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+textarea.field {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.field::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.field:hover {
+    background: var(--panel-alt);
+    border-color: #ffffff;
+}
+
+.field:focus {
+    background: var(--panel-alt);
+    border-color: #ffffff;
+}
+
+.primary-button {
+    margin-top: 16px;
+    background: var(--button-bg);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 11px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: translateY(-1px);
+}
+
+#ask-loading,
+#summary-loading {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+#ask-answer,
+#summary-answer {
+    margin-top: 16px;
+    color: var(--text);
+    white-space: pre-wrap;
+    line-height: 1.7;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Personal Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="page-shell">
+    <h2 class="page-title">Welcome to the AI Personal Assistant</h2>
+
+    <div class="container">
+        <div class="form-section">
+            <h4>Ask Anything</h4>
+            <form id="ask-form" action="/ask" method="post">
+                <label for="question">Ask a question:</label>
+                <input class="field" type="text" id="question" name="question" placeholder="Ask anything..." required>
+                <button class="primary-button" type="submit">Submit</button>
+            </form>
+
+            <p id="ask-loading" style="display: none">Loading...</p>
+            <p id="ask-answer"></p>
+        </div>
+
+        <div class="form-section">
+            <h4>Summarize Email</h4>
+            <form id="summary-form" action="/ask" method="post">
+                <label for="email">Provide email content:</label>
+                <textarea class="field" id="email" name="email" placeholder="Provide email content..." required></textarea>
+                <button class="primary-button" type="submit">Submit</button>
+            </form>
+
+            <p id="summary-loading" style="display: none">Loading...</p>
+            <p id="summary-answer"></p>
+        </div>
+    </div>
+</body>
+
+</html>
